@@ -80,6 +80,7 @@ public class ReplyServiceImpl implements ReplyService {
 
     @Override
     public void remove(Long rno) {
+
         Reply reply = replyRepository.findById(rno).orElseThrow();
         replyRepository.deleteById(rno);
     }
